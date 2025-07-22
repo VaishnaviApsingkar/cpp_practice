@@ -1,0 +1,49 @@
+# Given 2 number, swap them
+
+Ex. a = 2, b = 3
+After swapping , 
+b=3, a =2 
+
+#Approach 1: //using third temp variable
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a, b;
+    cout<<"Enter 1st number:";
+    cin>>a;
+    cout<<"Enter 2nd number:";
+    cin>>b;
+    int temp = a;
+    a=b;
+    b=temp;
+    cout<<"After swapping:"<<endl
+        <<"a="<<a
+        <<" b="<<b;
+    return 0;
+}
+
+------------------------------------------------------------------
+
+#Approach 2: // without using 3rd variable 
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a, b;
+    cout<<"Enter 1st number:";
+    cin>>a;
+    cout<<"Enter 2nd number:";
+    cin>>b;
+    
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    
+    cout<<"After swapping:"<<endl
+        <<"a="<<a
+        <<" b="<<b;
+    return 0;
+}
