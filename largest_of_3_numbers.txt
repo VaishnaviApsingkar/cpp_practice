@@ -1,0 +1,45 @@
+###Given the three numbers, find largest of three numbers
+
+###Code:
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int a = 0, b = 0, c = 0;
+    cout << "Enter 3 numbers: ";
+    cin >> a >> b >> c;
+
+    if (a >= b && a >= c) {
+        cout << "a = " << a << " is the largest." << endl;
+    }
+    else if (b >= a && b >= c) {
+        cout << "b = " << b << " is the largest." << endl;
+    }
+    else {
+        cout << "c = " << c << " is the largest." << endl;
+    }
+
+    return 0;
+}
+
+------------------------------------------------------------
+### Optimal:
+
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+int main(){
+    int a =0, b=0, c=0;
+    cout<< "Enter 3 numbers: ";
+    cin>>a>>b>>c;
+    int maxVal = max({a,b,c});
+    
+    cout << "Largest number is ";
+    if (a == maxVal) cout << "a = " << a << " ";
+    if (b == maxVal) cout << "b = " << b << " ";
+    if (c == maxVal) cout << "c = " << c << " ";
+    
+    return 0;
+}
